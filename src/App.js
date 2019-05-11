@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import Main from './component/Main';
-import { Link, BrowserRouter, Switch, Route } from 'react-router-dom';
-import Kontak from "./component/Kontak";
-import Profile from "./component/Profile";
-import Portofolio from "./component/Portofolio";
+import { Link } from 'react-router-dom';
+import Main from "./component/Main";
 
 class App extends Component {
     render() {
         return (
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={Main} />
-                    <Route path="/kontak" component={Kontak} />
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/portofolio" component={Portofolio} />
-                </Switch>
-                <hr />
-            </BrowserRouter>
+            <div>
+                <h1>Tugas WEB 3</h1>
+                <ul className="header">
+                    <li><Link to="/home">Home</Link></li> &nbsp;&nbsp;
+                    <li><Link to="/profile">Profile</Link></li>&nbsp;&nbsp;
+                    <li><Link to="/portofolio">Portofolio</Link></li>&nbsp;&nbsp;
+                    <li><Link to="/kontak">Kontak</Link></li>&nbsp;&nbsp;
+                <p><Main /></p>
+                </ul>
+            </div>
         );
     }
 }
 
-export default App;
+export default App; 
