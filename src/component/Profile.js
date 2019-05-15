@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import ImageAvatars from './ImageAvatars';
+import SimpleExpansionPanel from './SimpleExpansionPanel';
 
 class Profile extends Component {
     render() {
         return (
             <div>
-                <h2>Halaman Profile</h2>
+                <ImageAvatars></ImageAvatars>
+                <h2>About me?</h2>
+                <hr />
+                <SimpleExpansionPanel></SimpleExpansionPanel>
             </div>
         );
     }

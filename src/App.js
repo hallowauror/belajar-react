@@ -7,7 +7,6 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>Tugas WEB 3</h1>
                 <ul className="header">
                     <li><Link to="/home">Home</Link></li> &nbsp;&nbsp;
                     <li><Link to="/profile">Profile</Link></li>&nbsp;&nbsp;

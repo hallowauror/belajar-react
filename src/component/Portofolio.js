@@ -1,37 +1,29 @@
-import React, { Component } from 'react';
-import CardProduct from "./CardProduct";
+import React from 'react';
+//import axios from 'axios';
+import MediaCard from './MediaCard';
 
-class Portofolio extends Component {
-    constructor() {
-        super();
-        this.state = {
-            products: []
-        };
+class Portofolio extends React.Component {
+    /*state = {
+        portofolio: []
     }
 
     componentDidMount() {
-        fetch('http://my-json-server.typicode.com/techtona/product_api/product')
-            .then(response => response.json())
-            .then((data) => {
-                this.setState({
-                    products: data
-                })
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                const portofolio = res.data;
+                this.setState({ portofolio });
             })
-            .catch((m) => {
-                console.log("Error : " + m);
-            })
-    }
+    }*/
 
     render() {
         return (
+            //<ul>
+            // {this.state.portofolio.map(porto => <li>{porto.name}</li>)}
+            //</ul>
             <div>
-                <h2>Halaman Portofolio</h2>
-                <br />
-                {this.state.products.map((data) => {
-                    return (
-                        <CardProduct title={data.nama} price={data.harga} />
-                    )
-                })}
+                <h2>Portofolio</h2>
+                <hr />
+                <MediaCard></MediaCard>
             </div>
         );
     }
